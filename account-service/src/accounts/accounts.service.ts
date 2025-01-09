@@ -46,7 +46,7 @@ export class AccountsService {
   async updateBalance(accountNumber: string, amount: number) {
     const account = await this.findOne(accountNumber);
 
-    account.balance = account.balance + amount;
+    account.balance = Number(account.balance) + Number(amount);
 
     await this.accountsRepository.save(account);
 
