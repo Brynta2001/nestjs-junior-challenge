@@ -8,7 +8,7 @@ export class Account {
   @Column('text', { name: 'user_id' })
   userId: string;
 
-  @Column('text')
+  @Column('numeric')
   balance: number;
 
   @Column('boolean', { name: 'is_active' })

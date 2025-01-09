@@ -11,7 +11,7 @@ export class Transaction {
   @Column('text', { name: 'destination_account' })
   destinationAccount: string;
 
-  @Column('text')
+  @Column('numeric', { nullable: true })
   amount: number;
 
   @CreateDateColumn({ name: 'created_at' })
